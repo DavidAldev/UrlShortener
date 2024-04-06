@@ -7,9 +7,14 @@ namespace UrlShortener_Backend.Services
     {
         private readonly UrlRepository _urlRepository;
         private readonly int lenghtCode = 6;
+        private readonly Lazy<char[]> charsForShortening;
+        private readonly Lazy<Random> random;
+
         public UrlService(UrlShortenerDbContext context)
         {
             _urlRepository = new(context);
+            random = new Lazy<Random>(() => new Random());
+            charsForShortening = new Lazy<char[]>(GenerateCharsForShortening);
         }
 
         public async Task<string> ShortenUrl(string originalUrl)
@@ -53,17 +58,24 @@ namespace UrlShortener_Backend.Services
 
         private string GenerateRandomCode()
         {
-            char[] alphabet = Enumerable.Range('a', 26).Select(x => (char) x).ToArray();
-            char[] numbersFrom0To9 = Enumerable.Range('0', 10).Select(x => (char) x).ToArray();
-            char[] chars = alphabet.Concat(numbersFrom0To9).ToArray();
-            Random random = new();
-
             char[] randomString = new char[lenghtCode];
             for (int i = 0; i < lenghtCode; i++)
             {
-                randomString[i] = chars[random.Next(chars.Length)];
+                randomString[i] = charsForShortening.Value[random.Value.Next(charsForShortening.Value.Length)];
             }
             return new string(randomString);
+        }
+
+        private char[] GenerateCharsForShortening()
+        {
+            char[] alphabet = Enumerable.Range('a', 26)
+                                        .Select(x => (char) x)
+                                        .ToArray();
+            char[] numbersFrom0To9 = Enumerable.Range('0', 10)
+                                               .Select(x => (char) x)
+                                               .ToArray();
+
+            return alphabet.Concat(numbersFrom0To9).ToArray();
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using UrlShortener_Backend.DataAccess;
 using Microsoft.EntityFrameworkCore;
+using UrlShortener_Backend.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,6 +17,10 @@ builder.Services.AddDbContext<UrlShortenerDbContext>(options =>
     var serverVersion = ServerVersion.AutoDetect(connectionString);
     options.UseMySql(connectionString, serverVersion);
 });
+builder.Services.AddHttpContextAccessor();
+builder.Services.AddScoped<UrlService>();
+builder.Services.AddScoped<UrlRepository>();
+
 
 var app = builder.Build();
 

@@ -21,10 +21,6 @@ namespace UrlShortener_Backend.DataAccess
                 .Property(u => u.Id)
                 .UseMySqlIdentityColumn()
                 .ValueGeneratedOnAdd();
-
-            modelBuilder.Entity<Models.Url>()
-                .Property(u => u.CreatedOn)
-                .ValueGeneratedOnAdd();
         }
     }
 

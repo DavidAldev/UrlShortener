@@ -10,10 +10,11 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("3d6dffc2-5d4c-49fd-b60a-a4257b951227")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("UrlShortener_Backend")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+629e011180e79d9e0aa4c3b46c4db3bb35b12e4e")]
 [assembly: System.Reflection.AssemblyProductAttribute("UrlShortener_Backend")]
 [assembly: System.Reflection.AssemblyTitleAttribute("UrlShortener_Backend")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

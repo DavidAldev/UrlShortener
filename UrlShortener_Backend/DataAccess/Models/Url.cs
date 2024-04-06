@@ -10,8 +10,7 @@
         public int Id { get; set; }
         public string OriginalUrl { get; set; }
         public string ShortUrl { get; set; }
-        public DateTime CreatedOn { get; set; }
-        public int NumberOfVisits { get; set; }
+        public DateTime CreatedOn { get; set; } = DateTime.Now;
     }
 }
 

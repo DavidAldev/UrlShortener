@@ -2721,11 +2721,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/david/Documents/GitHub/UrlShortener/UrlShortener_Backend/UrlShortener_Backend/UrlShortener_Backend.csproj",
+      "projectUniqueName": "/Users/david/Documents/GitHub/UrlShortener/UrlShortener_Backend/UrlShortener_Backend.csproj",
       "projectName": "UrlShortener_Backend",
-      "projectPath": "/Users/david/Documents/GitHub/UrlShortener/UrlShortener_Backend/UrlShortener_Backend/UrlShortener_Backend.csproj",
+      "projectPath": "/Users/david/Documents/GitHub/UrlShortener/UrlShortener_Backend/UrlShortener_Backend.csproj",
       "packagesPath": "/Users/david/.nuget/packages/",
-      "outputPath": "/Users/david/Documents/GitHub/UrlShortener/UrlShortener_Backend/UrlShortener_Backend/obj/",
+      "outputPath": "/Users/david/Documents/GitHub/UrlShortener/UrlShortener_Backend/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/david/.nuget/NuGet/NuGet.Config"

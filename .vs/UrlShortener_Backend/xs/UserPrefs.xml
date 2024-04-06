@@ -1,0 +1,30 @@
+﻿<Properties StartupConfiguration="{0312CCCD-0582-4B79-963D-6934E52F4418}|https">
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.UrlShortener__Backend PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="UrlShortener_Backend/Program.cs">
+    <Files>
+      <File FileName="UrlShortener_Backend/DataAccess/Models/Url.cs" Line="9" Column="1" />
+      <File FileName="UrlShortener_Backend/Services/UrlService.cs" Line="10" Column="1" />
+      <File FileName="UrlShortener_Backend/Controllers/UrlShortener.cs" Line="14" Column="13" />
+      <File FileName="UrlShortener_Backend/Program.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="UrlShortener_Backend" expanded="True">
+            <Node name="UrlShortener_Backend">
+              <Node name="Controllers" expanded="True" />
+              <Node name="Services" expanded="True" />
+              <Node name="Program.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

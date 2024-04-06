@@ -1,5 +1,4 @@
-﻿using System;
-using UrlShortener_Backend.DataAccess;
+﻿using UrlShortener_Backend.DataAccess;
 
 namespace UrlShortener_Backend.Services
 {

@@ -6,7 +6,7 @@ namespace UrlShortener_Backend.Services
     public class UrlService
     {
         private readonly UrlRepository _urlRepository;
-        private int lenghtCode = 6;
+        private readonly int lenghtCode = 6;
         public UrlService(UrlShortenerDbContext context)
         {
             _urlRepository = new(context);

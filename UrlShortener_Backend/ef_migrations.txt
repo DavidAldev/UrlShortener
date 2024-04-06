@@ -1,0 +1,6 @@
+﻿
+// Make a new migration
+dotnet ef migrations Add initial_Url_Table
+
+// Apply new migrations
+dotnet ef database update

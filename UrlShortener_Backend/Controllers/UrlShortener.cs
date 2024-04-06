@@ -34,7 +34,8 @@ namespace UrlShortener_Backend.Controllers
                 }
 
                 string originalUrl = await _urlService.GetOriginalUrl(shortUrl);
-                return Ok(originalUrl);
+                // return Ok(originalUrl);
+                return RedirectPermanent(originalUrl);
             }
             catch (Exception e)
             {
@@ -52,6 +53,11 @@ namespace UrlShortener_Backend.Controllers
         {
             try
             {
+                if (!_urlService.IsValidUrl(originalUrl))
+                {
+                    return BadRequest("Invalid Url");
+                }
+
                 string shortCode = await _urlService.ShortenUrl(originalUrl);
                 return Ok(baseUrl + shortCode);
             }

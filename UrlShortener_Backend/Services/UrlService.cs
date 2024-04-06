@@ -1,4 +1,5 @@
-﻿using UrlShortener_Backend.DataAccess;
+﻿using System.Data.SqlTypes;
+using UrlShortener_Backend.DataAccess;
 
 namespace UrlShortener_Backend.Services
 {
@@ -32,6 +33,11 @@ namespace UrlShortener_Backend.Services
         public bool IsValidShortUrl(string shortUrl)
         {
             return shortUrl is not null && shortUrl.Length == lenghtCode;
+        }
+
+        public bool IsValidUrl(string url)
+        {
+            return Uri.TryCreate(url, UriKind.Absolute, out Uri uriResult);
         }
 
         public string GetBaseUrl()

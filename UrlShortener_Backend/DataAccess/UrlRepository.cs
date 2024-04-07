@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace UrlShortener_Backend.DataAccess
 {
-    public class UrlRepository
+    public class UrlRepository : IUrlRepository
     {
         private readonly UrlShortenerDbContext _context;
 

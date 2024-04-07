@@ -3,7 +3,7 @@ using UrlShortener_Backend.DataAccess;
 
 namespace UrlShortener_Backend.Services
 {
-    public class UrlService
+    public class UrlService : IUrlService
     {
         private readonly UrlRepository _urlRepository;
         private readonly int lenghtCode = 6;
